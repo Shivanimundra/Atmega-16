@@ -1,0 +1,18 @@
+#include <SoftwareSerial.h>
+#ifndef F_CPU
+#define F_CPU 8000000UL
+#endif
+
+
+SoftwareSerial myserial(6,7);
+void setup() {
+  // put your setup code here, to run once:
+   DDRB = 0XFF;
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  PORTB ^= 0X20; 
+  delay(1000);
+
+}
